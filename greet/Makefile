@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+greet/CMakeFiles/sayHello.dir/rule:
+	cd /home/jeonghyejin/gbc && $(MAKE) -f CMakeFiles/Makefile2 greet/CMakeFiles/sayHello.dir/rule
+.PHONY : greet/CMakeFiles/sayHello.dir/rule
+
+# Convenience name for target.
+sayHello: greet/CMakeFiles/sayHello.dir/rule
+
+.PHONY : sayHello
+
+# fast build rule for target.
+sayHello/fast:
+	cd /home/jeonghyejin/gbc && $(MAKE) -f greet/CMakeFiles/sayHello.dir/build.make greet/CMakeFiles/sayHello.dir/build
+.PHONY : sayHello/fast
+
+# Convenience name for target.
 greet/CMakeFiles/greet.dir/rule:
 	cd /home/jeonghyejin/gbc && $(MAKE) -f CMakeFiles/Makefile2 greet/CMakeFiles/greet.dir/rule
 .PHONY : greet/CMakeFiles/greet.dir/rule
@@ -131,6 +146,7 @@ hello.o: hello.cpp.o
 
 # target to build an object file
 hello.cpp.o:
+	cd /home/jeonghyejin/gbc && $(MAKE) -f greet/CMakeFiles/sayHello.dir/build.make greet/CMakeFiles/sayHello.dir/hello.cpp.o
 	cd /home/jeonghyejin/gbc && $(MAKE) -f greet/CMakeFiles/greet.dir/build.make greet/CMakeFiles/greet.dir/hello.cpp.o
 .PHONY : hello.cpp.o
 
@@ -140,6 +156,7 @@ hello.i: hello.cpp.i
 
 # target to preprocess a source file
 hello.cpp.i:
+	cd /home/jeonghyejin/gbc && $(MAKE) -f greet/CMakeFiles/sayHello.dir/build.make greet/CMakeFiles/sayHello.dir/hello.cpp.i
 	cd /home/jeonghyejin/gbc && $(MAKE) -f greet/CMakeFiles/greet.dir/build.make greet/CMakeFiles/greet.dir/hello.cpp.i
 .PHONY : hello.cpp.i
 
@@ -149,6 +166,7 @@ hello.s: hello.cpp.s
 
 # target to generate assembly for a file
 hello.cpp.s:
+	cd /home/jeonghyejin/gbc && $(MAKE) -f greet/CMakeFiles/sayHello.dir/build.make greet/CMakeFiles/sayHello.dir/hello.cpp.s
 	cd /home/jeonghyejin/gbc && $(MAKE) -f greet/CMakeFiles/greet.dir/build.make greet/CMakeFiles/greet.dir/hello.cpp.s
 .PHONY : hello.cpp.s
 
@@ -160,6 +178,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... sayHello"
 	@echo "... greet"
 	@echo "... hello.o"
 	@echo "... hello.i"

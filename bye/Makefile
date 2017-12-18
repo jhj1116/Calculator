@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+bye/CMakeFiles/sayBye.dir/rule:
+	cd /home/jeonghyejin/gbc && $(MAKE) -f CMakeFiles/Makefile2 bye/CMakeFiles/sayBye.dir/rule
+.PHONY : bye/CMakeFiles/sayBye.dir/rule
+
+# Convenience name for target.
+sayBye: bye/CMakeFiles/sayBye.dir/rule
+
+.PHONY : sayBye
+
+# fast build rule for target.
+sayBye/fast:
+	cd /home/jeonghyejin/gbc && $(MAKE) -f bye/CMakeFiles/sayBye.dir/build.make bye/CMakeFiles/sayBye.dir/build
+.PHONY : sayBye/fast
+
+# Convenience name for target.
 bye/CMakeFiles/bye.dir/rule:
 	cd /home/jeonghyejin/gbc && $(MAKE) -f CMakeFiles/Makefile2 bye/CMakeFiles/bye.dir/rule
 .PHONY : bye/CMakeFiles/bye.dir/rule
@@ -131,6 +146,7 @@ bye.o: bye.cpp.o
 
 # target to build an object file
 bye.cpp.o:
+	cd /home/jeonghyejin/gbc && $(MAKE) -f bye/CMakeFiles/sayBye.dir/build.make bye/CMakeFiles/sayBye.dir/bye.cpp.o
 	cd /home/jeonghyejin/gbc && $(MAKE) -f bye/CMakeFiles/bye.dir/build.make bye/CMakeFiles/bye.dir/bye.cpp.o
 .PHONY : bye.cpp.o
 
@@ -140,6 +156,7 @@ bye.i: bye.cpp.i
 
 # target to preprocess a source file
 bye.cpp.i:
+	cd /home/jeonghyejin/gbc && $(MAKE) -f bye/CMakeFiles/sayBye.dir/build.make bye/CMakeFiles/sayBye.dir/bye.cpp.i
 	cd /home/jeonghyejin/gbc && $(MAKE) -f bye/CMakeFiles/bye.dir/build.make bye/CMakeFiles/bye.dir/bye.cpp.i
 .PHONY : bye.cpp.i
 
@@ -149,6 +166,7 @@ bye.s: bye.cpp.s
 
 # target to generate assembly for a file
 bye.cpp.s:
+	cd /home/jeonghyejin/gbc && $(MAKE) -f bye/CMakeFiles/sayBye.dir/build.make bye/CMakeFiles/sayBye.dir/bye.cpp.s
 	cd /home/jeonghyejin/gbc && $(MAKE) -f bye/CMakeFiles/bye.dir/build.make bye/CMakeFiles/bye.dir/bye.cpp.s
 .PHONY : bye.cpp.s
 
@@ -159,6 +177,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... sayBye"
 	@echo "... rebuild_cache"
 	@echo "... bye"
 	@echo "... bye.o"

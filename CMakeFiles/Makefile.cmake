@@ -115,6 +115,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "greet/CMakeFiles/sayHello.dir/DependInfo.cmake"
   "greet/CMakeFiles/greet.dir/DependInfo.cmake"
+  "bye/CMakeFiles/sayBye.dir/DependInfo.cmake"
   "bye/CMakeFiles/bye.dir/DependInfo.cmake"
   )

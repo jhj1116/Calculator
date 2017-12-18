@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named sayHello
+
+# Build rule for target.
+sayHello: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sayHello
+.PHONY : sayHello
+
+# fast build rule for target.
+sayHello/fast:
+	$(MAKE) -f greet/CMakeFiles/sayHello.dir/build.make greet/CMakeFiles/sayHello.dir/build
+.PHONY : sayHello/fast
+
+#=============================================================================
 # Target rules for targets named greet
 
 # Build rule for target.
@@ -122,6 +135,19 @@ greet: cmake_check_build_system
 greet/fast:
 	$(MAKE) -f greet/CMakeFiles/greet.dir/build.make greet/CMakeFiles/greet.dir/build
 .PHONY : greet/fast
+
+#=============================================================================
+# Target rules for targets named sayBye
+
+# Build rule for target.
+sayBye: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sayBye
+.PHONY : sayBye
+
+# fast build rule for target.
+sayBye/fast:
+	$(MAKE) -f bye/CMakeFiles/sayBye.dir/build.make bye/CMakeFiles/sayBye.dir/build
+.PHONY : sayBye/fast
 
 #=============================================================================
 # Target rules for targets named bye
@@ -144,7 +170,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... sayHello"
 	@echo "... greet"
+	@echo "... sayBye"
 	@echo "... bye"
 .PHONY : help
 
