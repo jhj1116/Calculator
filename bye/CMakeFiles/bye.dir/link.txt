@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbye.a  CMakeFiles/bye.dir/bye.cpp.o
+/usr/bin/ranlib libbye.a
