@@ -1,3 +1,4 @@
+#pragma once
 #ifndef DIV_H
 #define DIV_H
 
