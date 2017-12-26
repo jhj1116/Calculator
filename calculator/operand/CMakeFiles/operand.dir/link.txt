@@ -1,0 +1,2 @@
+/usr/bin/ar qc liboperand.a  CMakeFiles/operand.dir/RawElement.cpp.o CMakeFiles/operand.dir/IntElement.cpp.o CMakeFiles/operand.dir/FloatElement.cpp.o
+/usr/bin/ranlib liboperand.a

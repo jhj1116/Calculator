@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.5.1)
+project(calculator)
+include_directories(../ ../parser ../operator)
+add_library(operand STATIC RawElement.cpp IntElement.cpp FloatElement.cpp)
+TARGET_LINK_LIBRARIES(operand calculator operator parser)

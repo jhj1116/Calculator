@@ -1,4 +1,4 @@
-# Install script for directory: /home/jeonghyejin/gbc/ASD
+# Install script for directory: /home/jeonghyejin/gbc/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/jeonghyejin/gbc/greet/cmake_install.cmake")
-  include("/home/jeonghyejin/gbc/bye/cmake_install.cmake")
+  include("/home/jeonghyejin/gbc/calculator/cmake_install.cmake")
 
 endif()
 

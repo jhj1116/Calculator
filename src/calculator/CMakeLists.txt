@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.5.1)
+project (calculator)
+INCLUDE_DIRECTORIES(parser operand operator)
+add_subdirectory(parser)
+add_subdirectory(operand)
+add_subdirectory(operator)
+add_library(calculator STATIC Calculator.cpp Data.cpp)
+target_link_libraries(calculator parser operand operator)

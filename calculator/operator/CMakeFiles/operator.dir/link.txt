@@ -1,0 +1,2 @@
+/usr/bin/ar qc liboperator.a  CMakeFiles/operator.dir/Op.cpp.o CMakeFiles/operator.dir/BraketOp.cpp.o CMakeFiles/operator.dir/UnaryOp.cpp.o CMakeFiles/operator.dir/BinaryOp.cpp.o CMakeFiles/operator.dir/Plus.cpp.o CMakeFiles/operator.dir/Minus.cpp.o CMakeFiles/operator.dir/Mul.cpp.o CMakeFiles/operator.dir/Div.cpp.o CMakeFiles/operator.dir/Mod.cpp.o CMakeFiles/operator.dir/Exp.cpp.o CMakeFiles/operator.dir/Sin.cpp.o CMakeFiles/operator.dir/Cos.cpp.o
+/usr/bin/ranlib liboperator.a

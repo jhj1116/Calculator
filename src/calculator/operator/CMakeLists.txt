@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.5.1)
+project(calculator)
+include_directories(../ ../operand ../parser)
+add_library(operator STATIC Op.cpp BraketOp.cpp UnaryOp.cpp BinaryOp.cpp Plus.cpp Minus.cpp Mul.cpp Div.cpp Mod.cpp Exp.cpp Sin.cpp Cos.cpp)
+TARGET_LINK_LIBRARIES(operator calculator parser operand)

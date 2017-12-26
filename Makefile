@@ -48,7 +48,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jeonghyejin/gbc/ASD
+CMAKE_SOURCE_DIR = /home/jeonghyejin/gbc/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/jeonghyejin/gbc
@@ -111,56 +111,96 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named sayHello
+# Target rules for targets named start_cal
 
 # Build rule for target.
-sayHello: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sayHello
-.PHONY : sayHello
+start_cal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 start_cal
+.PHONY : start_cal
 
 # fast build rule for target.
-sayHello/fast:
-	$(MAKE) -f greet/CMakeFiles/sayHello.dir/build.make greet/CMakeFiles/sayHello.dir/build
-.PHONY : sayHello/fast
+start_cal/fast:
+	$(MAKE) -f CMakeFiles/start_cal.dir/build.make CMakeFiles/start_cal.dir/build
+.PHONY : start_cal/fast
 
 #=============================================================================
-# Target rules for targets named greet
+# Target rules for targets named calculator
 
 # Build rule for target.
-greet: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 greet
-.PHONY : greet
+calculator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 calculator
+.PHONY : calculator
 
 # fast build rule for target.
-greet/fast:
-	$(MAKE) -f greet/CMakeFiles/greet.dir/build.make greet/CMakeFiles/greet.dir/build
-.PHONY : greet/fast
+calculator/fast:
+	$(MAKE) -f calculator/CMakeFiles/calculator.dir/build.make calculator/CMakeFiles/calculator.dir/build
+.PHONY : calculator/fast
 
 #=============================================================================
-# Target rules for targets named sayBye
+# Target rules for targets named parser
 
 # Build rule for target.
-sayBye: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sayBye
-.PHONY : sayBye
+parser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 parser
+.PHONY : parser
 
 # fast build rule for target.
-sayBye/fast:
-	$(MAKE) -f bye/CMakeFiles/sayBye.dir/build.make bye/CMakeFiles/sayBye.dir/build
-.PHONY : sayBye/fast
+parser/fast:
+	$(MAKE) -f calculator/parser/CMakeFiles/parser.dir/build.make calculator/parser/CMakeFiles/parser.dir/build
+.PHONY : parser/fast
 
 #=============================================================================
-# Target rules for targets named bye
+# Target rules for targets named operand
 
 # Build rule for target.
-bye: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bye
-.PHONY : bye
+operand: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 operand
+.PHONY : operand
 
 # fast build rule for target.
-bye/fast:
-	$(MAKE) -f bye/CMakeFiles/bye.dir/build.make bye/CMakeFiles/bye.dir/build
-.PHONY : bye/fast
+operand/fast:
+	$(MAKE) -f calculator/operand/CMakeFiles/operand.dir/build.make calculator/operand/CMakeFiles/operand.dir/build
+.PHONY : operand/fast
+
+#=============================================================================
+# Target rules for targets named operator
+
+# Build rule for target.
+operator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 operator
+.PHONY : operator
+
+# fast build rule for target.
+operator/fast:
+	$(MAKE) -f calculator/operator/CMakeFiles/operator.dir/build.make calculator/operator/CMakeFiles/operator.dir/build
+.PHONY : operator/fast
+
+Main.o: Main.cpp.o
+
+.PHONY : Main.o
+
+# target to build an object file
+Main.cpp.o:
+	$(MAKE) -f CMakeFiles/start_cal.dir/build.make CMakeFiles/start_cal.dir/Main.cpp.o
+.PHONY : Main.cpp.o
+
+Main.i: Main.cpp.i
+
+.PHONY : Main.i
+
+# target to preprocess a source file
+Main.cpp.i:
+	$(MAKE) -f CMakeFiles/start_cal.dir/build.make CMakeFiles/start_cal.dir/Main.cpp.i
+.PHONY : Main.cpp.i
+
+Main.s: Main.cpp.s
+
+.PHONY : Main.s
+
+# target to generate assembly for a file
+Main.cpp.s:
+	$(MAKE) -f CMakeFiles/start_cal.dir/build.make CMakeFiles/start_cal.dir/Main.cpp.s
+.PHONY : Main.cpp.s
 
 # Help Target
 help:
@@ -170,10 +210,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... sayHello"
-	@echo "... greet"
-	@echo "... sayBye"
-	@echo "... bye"
+	@echo "... start_cal"
+	@echo "... calculator"
+	@echo "... parser"
+	@echo "... operand"
+	@echo "... operator"
+	@echo "... Main.o"
+	@echo "... Main.i"
+	@echo "... Main.s"
 .PHONY : help
 
 

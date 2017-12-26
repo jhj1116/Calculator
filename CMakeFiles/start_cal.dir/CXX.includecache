@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jeonghyejin/gbc/src/./calculator/./Data.h
+string
+-
+
+/home/jeonghyejin/gbc/src/./calculator/Calculator.h
+./Data.h
+/home/jeonghyejin/gbc/src/./calculator/./Data.h
+string
+-
+list
+-
+
+/home/jeonghyejin/gbc/src/Main.cpp
+stdlib.h
+-
+iostream
+-
+./calculator/Calculator.h
+/home/jeonghyejin/gbc/src/./calculator/Calculator.h
+

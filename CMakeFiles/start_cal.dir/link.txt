@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/start_cal.dir/Main.cpp.o  -o bin/start_cal calculator/libcalculator.a calculator/parser/libparser.a calculator/operand/liboperand.a calculator/operator/liboperator.a calculator/libcalculator.a calculator/parser/libparser.a calculator/operand/liboperand.a calculator/operator/liboperator.a 
